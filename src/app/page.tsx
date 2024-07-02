@@ -7,17 +7,17 @@ export default function Home() {
   const beachTripDate = '2024-07-19T00:00:00'; // Set your beach trip date here
 
     const mobileImages = [
-       './beach_1.jpeg',
-        './beach_2.jpeg',
-        './beach_3.jpeg',
-        './beach_4.jpeg',
+       '/beach_1.jpeg',
+        '/beach_2.jpeg',
+        '/beach_3.jpeg',
+        '/beach_4.jpeg',
     ];
 
     const desktopImages = [
-        './gwt_main.jpg',
-        './ta_hr.png',
-        './pos_gold.png',
-        './fms.png'
+        '/gwt_main.jpg',
+        '/ta_hr.png',
+        '/pos_gold.png',
+        '/fms.png'
     ];
 
   return (
