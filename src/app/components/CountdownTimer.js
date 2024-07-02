@@ -18,19 +18,14 @@ const colorfulFlow = keyframes`
 
 const TimerWrapper = styled.div`
     display: flex;
+    margin: auto;
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    height: 100vh;
-    background:
-            url('/beach.svg') no-repeat center center fixed,  /* Background image */
-            linear-gradient(270deg, #ff6f61, #6a11cb, #2575fc, #ff6f61);   /* Colorful overlay */
-    background-size: 800% 800%;
     color: white;
     font-family: 'Arial', sans-serif;
     animation: ${colorfulFlow} 20s linear infinite;
     text-align: center;
-    padding: 20px;
 
     @media (max-width: 768px) {
         padding: 10px;
@@ -38,6 +33,7 @@ const TimerWrapper = styled.div`
 `;
 
 const TimeDisplay = styled.div`
+    z-index: 100;
   font-size: 2rem;
   margin: 10px 0;
 
@@ -51,6 +47,7 @@ const TimeDisplay = styled.div`
 `;
 
 const Title = styled.h1`
+    z-index: 100;
   font-size: 3rem;
 
     @media (max-width: 768px) {
@@ -94,12 +91,14 @@ const CountdownTimer = ({ targetDate }) => {
     }, [targetDate]);
 
     return (
-        <TimerWrapper>
-            <Title>Global Wave Technology Beach Trip Countdown</Title>
-            <TimeDisplay>
-                {timeRemaining.days} days {timeRemaining.hours} hours {timeRemaining.minutes} minutes {timeRemaining.seconds} seconds
-            </TimeDisplay>
-        </TimerWrapper>
+       <div className="countdown">
+           <TimerWrapper>
+               <Title>GWT Beach Trip Countdown</Title>
+               <TimeDisplay>
+                   {timeRemaining.days} days {timeRemaining.hours} hours {timeRemaining.minutes} minutes {timeRemaining.seconds} seconds
+               </TimeDisplay>
+           </TimerWrapper>
+       </div>
     );
 };
 
