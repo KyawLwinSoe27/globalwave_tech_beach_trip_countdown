@@ -1,0 +1,6 @@
+.count-down-time {
+    @apply w-full h-full flex justify-center items-center m-auto;
+}
+.countdown {
+    @apply sm:w-full md:w-full;
+}
