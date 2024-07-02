@@ -23,7 +23,7 @@ export default function Home() {
   return (
       <main className="relative h-screen">
           <Slideshow mobileImages={mobileImages} desktopImages={desktopImages}/>
-              <div className={`bg-transparent-grey absolute bottom-0 md:left-1/2 transform md:-translate-x-1/2 md:w-full lg:w-2/4 p-4 rounded-md`}>
+              <div className={`bg-transparent-grey absolute bottom-0 md:left-1/2 transform md:-translate-x-1/2 w-full lg:w-2/4 p-4 rounded-md`}>
                   <CountdownTimer targetDate={beachTripDate}/>
               </div>
       </main>
